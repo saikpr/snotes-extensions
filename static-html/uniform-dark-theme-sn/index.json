@@ -1,0 +1,21 @@
+{
+    "identifier": "io.xthursdayx.uniform-dark-theme",
+    "name": "Uniform Dark+",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "v1.0.4",
+    "description": "Theme inspired by Visual Studio Code's default dark theme, designed for Standard Notes. It is loosely based off my other theme that unifies VS Code's default dark theme.",
+    "marketing_url": "https://github.com/xthursdayx/uniform-dark-theme-sn/",
+    "thumbnail_url": "https://github.com/xthursdayx/uniform-dark-theme-sn/blob/master/Images/preview.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//uniform-dark-theme-sn/v1.0.4/dist/dist.css",
+    "download_url": "https://github.com/xthursdayx/uniform-dark-theme-sn/archive/v1.0.4.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//uniform-dark-theme-sn/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#1e1e1efc",
+        "foreground_color": "#d4d4d4fc",
+        "border_color": "#414141fc"
+    },
+    "statusBar": "dark-content"
+}

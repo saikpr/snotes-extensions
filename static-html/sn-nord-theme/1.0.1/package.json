@@ -1,0 +1,22 @@
+{
+  "name": "sn-nord-theme",
+  "description": "A theme with shady greys and mossy greens.",
+  "version": "1.0.1",
+  "license": "AGPL-3.0",
+  "main": "dist/dist.css",
+  "devDependencies": {
+    "grunt": "^1.3.0",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-newer": "^1.2.0",
+    "sass": "^1.26.10"
+  },
+  "sn": {
+    "main": "dist/dist.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xthursdayx/sn-nord-theme.git"
+  }
+}

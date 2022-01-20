@@ -1,0 +1,21 @@
+{
+    "identifier": "io.github.christianhans.sn-gruvbox-dark-theme",
+    "name": "Gruvbox Dark Theme",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "0.0.16",
+    "description": "Standard Notes theme based on colors from the gruvbox theme for Vim.",
+    "marketing_url": "https://github.com/christianhans/sn-gruvbox-dark-theme",
+    "thumbnail_url": "https://raw.githubusercontent.com/christianhans/sn-gruvbox-dark-theme/master/preview.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-gruvbox-dark-theme/0.0.16/dist/dist.css",
+    "download_url": "https://github.com/christianhans/sn-gruvbox-dark-theme/archive/0.0.16.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-gruvbox-dark-theme/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#D79921",
+        "foreground_color": "#076678",
+        "border_color": "#D79921"
+    },
+    "statusBar": "dark-content"
+}

@@ -1,0 +1,23 @@
+---
+metatype: json
+---
+
+  {
+    "identifier": "io.github.xthursdayx.sn-pencil-theme",
+    "name": "Pencil",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "description": "A dark, writing-oriented theme",
+    "version": "1.0.3",
+    "url": "https://raw.githubusercontent.com/xthursdayx/sn-pencil-theme/master/dist/dist.css",
+    "download_url": "https://github.com/xthursdayx/sn-pencil-theme/archive/1.0.3.zip",
+    "marketing_url": "https://github.com/xthursdayx/sn-pencil-theme",
+    "latest_url": "https://raw.githubusercontent.com/xthursdayx/sn-pencil-theme/master/ext.json",
+    "dock_icon": {
+      "type": "circle",
+      "background_color": "#AE422F",
+      "foreground_color": "#000000",
+      "border_color": "#AE422F"
+    },
+    "statusBar": "dark-content"
+  }

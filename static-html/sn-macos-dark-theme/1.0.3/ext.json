@@ -1,0 +1,12 @@
+{
+  "identifier": "io.github.mjfakler.sn-macos-dark-theme",
+  "name": "macOS Dark Theme",
+  "content_type": "SN|Theme",
+  "area": "themes",
+  "version": "1.0.3",
+  "description": "macOS Dark Mode theme for Standard Notes.",
+  "url": "https://cdn.jsdelivr.net/gh/mjfakler/sn-macos-dark-theme@1.0.3/dist/dist.css",
+  "download_url": "https://github.com/mjfakler/sn-macos-dark-theme/archive/1.0.3.zip",
+  "latest_url": "https://listed.to/p/5Cs1xPMVW6",
+  "marketing_url": "https://github.com/mjfakler/sn-macos-dark-theme"
+}

@@ -1,0 +1,23 @@
+---
+metatype: json
+---
+
+  {
+    "identifier": "io.github.xthursdayx.sn-nord-theme",
+    "name": "Nord",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "description": " An arctic, north-bluish clean and elegant Standard Notes theme.",
+    "version": "1.0.1",
+    "url": "https://raw.githubusercontent.com/xthursdayx/sn-nord-theme/master/dist/dist.css",
+    "download_url": "https://github.com/xthursdayx/sn-nord-theme/archive/1.0.0.zip",
+    "marketing_url": "https://github.com/xthursdayx/sn-nord-theme",
+    "latest_url": "https://raw.githubusercontent.com/xthursdayx/sn-nord-theme/master/ext.json",
+    "dock_icon": {
+      "type": "circle",
+      "background_color": "#88C0D0",
+      "foreground_color": "#81a1c1",
+      "border_color": "#2e3440"
+    },
+    "statusBar": "dark-content"
+  }

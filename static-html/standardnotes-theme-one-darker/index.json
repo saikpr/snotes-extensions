@@ -1,0 +1,21 @@
+{
+    "identifier": "io.github.eenpadvinder.standardnotes-theme-one-darker",
+    "name": "One Dark Darker",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "v0.2.1",
+    "description": "VS Code One Dark Darker theme for Standard Notes.",
+    "marketing_url": "https://github.com/eenpadvinder/standardnotes-theme-one-darker",
+    "thumbnail_url": "https://raw.githubusercontent.com/eenpadvinder/standardnotes-theme-one-darker/master/preview.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//standardnotes-theme-one-darker/v0.2.1/dist/dist.css",
+    "download_url": "https://github.com/eenpadvinder/standardnotes-theme-one-darker/archive/v0.2.1.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//standardnotes-theme-one-darker/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#181a1f",
+        "foreground_color": "#181a1f",
+        "border_color": "#d55fde"
+    },
+    "statusBar": "dark-content"
+}

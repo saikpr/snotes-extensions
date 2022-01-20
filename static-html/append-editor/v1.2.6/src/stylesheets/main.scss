@@ -1,0 +1,837 @@
+@import '~sn-stylekit/dist/stylekit.css';
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/addon/dialog/dialog.css';
+@import '~codemirror/addon/search/matchesonscrollbar.css';
+@import '~highlight.js/scss/vs.scss';
+
+:root {
+  --sn-stylekit-font-size-editor: 16px;
+  --sn-stylekit-monospace-font: SFMono-Regular, Consolas, Liberation Mono, Menlo,
+    'Ubuntu Mono', courier, monospace;
+}
+
+@media screen and (max-width: 650px) {
+  :root {
+    --sn-stylekit-font-size-editor: 18px;
+  }
+  h1 {
+    font-size: 1.75em; // is usually 2em
+  }
+}
+
+body,
+html {
+  background-color: transparent;
+  background-color: var(--sn-stylekit-background-color);
+  font-family: var(--sn-stylekit-sans-serif-font);
+  font-size: var(--sn-stylekit-base-font-size);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  &.fixed-height {
+    overflow-y: hidden;
+  }
+}
+
+* {
+  // To prevent gray flash when focusing input on mobile Safari
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  color: var(--sn-stylekit-foreground-color);
+  background-color: transparent;
+  border-width: 0px;
+  font-family: var(--sn-stylekit-sans-serif-font);
+  font-size: var(--sn-stylekit-font-size-editor);
+  &.off {
+    svg {
+      opacity: 0.75;
+    }
+  }
+  &.off:hover {
+    background-color: var(--sn-stylekit-contrast-background-color);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &.chevron-toggle-button {
+    padding-left: 0px;
+    display: flex;
+  }
+  &.menu-button {
+    display: flex;
+    margin: 8px 20px;
+    padding: 8px 16px;
+    text-align: left;
+    svg {
+      margin-top: auto;
+    }
+    &.chevron-toggle-button {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      @media screen and (min-width: 330px) {
+        padding: 0px;
+      }
+    }
+  }
+  .chevron-icon,
+  .chevron-button-caption {
+    line-height: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .button-caption {
+    padding-left: 5px;
+  }
+}
+
+button:hover {
+  background-color: var(--sn-stylekit-contrast-background-color);
+}
+
+button:focus {
+  outline: -webkit-focus-ring-color auto 1px;
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
+  outline-width: 1px;
+}
+
+.sn-component {
+  display: flex;
+  flex-direction: column;
+  min-height: 99.9vh;
+  @media screen and (max-width: 420px) {
+    min-height: -webkit-fill-available;
+  }
+
+  .sk-button.info,
+  .sk-button.neutral {
+    font-size: var(--sn-stylekit-font-size-editor);
+  }
+
+  .sk-panel.main {
+    max-width: 700px;
+    width: 100%;
+    margin: 10px 5px;
+
+    @media screen and (min-width: 725px) {
+      // Do not include Settings
+      &.edit,
+      &.view,
+      &.appendix {
+        max-width: calc(700px - 2em);
+        padding: 1em;
+        padding-bottom: 0px;
+      }
+    }
+
+    @media screen and (max-width: 725px) {
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+      box-shadow: none;
+      margin: 0;
+      padding: 0px;
+    }
+
+    &.MonacoEditorContainerParentDiv {
+      max-width: 800px;
+      // Hides the horizontal scroll bar when using the Monaco Editor
+      // Otherwise the horizontal scroll bar will flash when the Monaco editor suggests words
+      overflow-x: hidden !important;
+    }
+    &.otherEditor {
+      @media screen and (max-width: 725px) {
+        border-top: none;
+      }
+    }
+  }
+
+  .sk-input.textarea {
+    min-height: 136px;
+    padding: 9px 10px;
+    max-width: calc(
+      100% - 22px
+    ); // 22px is 10px + 10px padding and 1px + 1px border
+    width: 100%;
+    height: 100%;
+    resize: vertical;
+    overflow-y: auto;
+    font-family: var(--sn-stylekit-sans-serif-font);
+    font-size: var(--sn-stylekit-font-size-editor);
+    line-height: 1.7;
+  }
+
+  // This is automatic in Microsoft Edge.
+  // We need to make it explicit for Firefox.
+  .sk-input.textarea:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+    outline-color: -webkit-focus-ring-color;
+    outline-style: auto;
+    outline-width: 1px;
+  }
+
+  .sk-input.textarea.editnote {
+    max-height: calc(100% - 32px);
+  }
+
+  .sk-input.textarea.append {
+    max-height: calc(100% - 22px);
+  }
+
+  .sk-panel-row {
+    // used in #appendix, note dialog, and settings
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; // default is 0.4rem top only
+  }
+  .sk-button-group {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sk-panel-section:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+#header {
+  background-color: var(--sn-stylekit-background-color);
+  display: flex;
+  overflow: auto;
+  padding: 10px 0;
+  width: 100%;
+
+  svg::after {
+    content: '';
+    background: var(--sn-stylekit-info-color);
+    opacity: 0.1;
+  }
+
+  .sk-button-group {
+    max-width: 700px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    .divider {
+      opacity: 0.25;
+      cursor: unset;
+      margin-right: 0px;
+      @media screen and (max-width: 330px) {
+        display: none;
+      }
+    }
+  }
+  &.fixed {
+    position: fixed;
+    z-index: 10;
+  }
+}
+
+.menu-overlay {
+  background-color: var(--sn-stylekit-neutral-color);
+  cursor: pointer;
+  height: 100%;
+  left: 0;
+  opacity: 0.2;
+  position: fixed;
+  top: 60.2px;
+  width: 100%;
+  z-index: 9;
+  @media screen and (max-width: 330px) {
+    top: 56.2px;
+  }
+}
+
+#menu {
+  background-color: var(--sn-stylekit-background-color);
+  border: 1px solid var(--sn-stylekit-border-color);
+  border-right-width: 0px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 62px);
+  margin-right: 0px;
+  margin-top: 0px;
+  max-width: 60%;
+  min-width: 330px;
+  overflow-y: auto;
+  position: fixed;
+  right: 0px;
+  width: 100%;
+  z-index: 10;
+
+  @media screen and (max-width: 330px) {
+    max-width: 100%;
+    min-width: 300px;
+    height: calc(100vh - 56.2px);
+  }
+
+  @media screen and (min-width: 750px) {
+    max-width: 450px;
+    width: 450px;
+  }
+
+  .notification {
+    p {
+      display: flex;
+      margin: 0px 20px 8px;
+      padding: 0px 16px;
+      text-align: left;
+    }
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 200ms ease-in;
+    }
+
+    &.hidden {
+      height: 0px;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s 500ms, opacity 500ms ease-out;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    #printButton {
+      display: none;
+    }
+  }
+  .extra-space {
+    @media screen and (min-width: 800px) {
+      margin-bottom: 5em;
+    }
+  }
+}
+
+#content {
+  background-color: var(--sn-stylekit-contrast-background-color);
+  flex: auto;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 725px) {
+    padding: 0;
+  }
+  &.edit-only {
+    @media screen and (max-width: 420px) {
+      max-height: calc(100vh - 60.2px);
+      &.focused {
+        max-height: 55vh;
+        .CodeMirror {
+          max-height: calc(55vh - 0.5rem);
+        }
+      }
+    }
+    @media screen and (max-width: 330px) {
+      max-height: calc(100vh - 56.2px);
+    }
+  }
+  &.fixed-header {
+    padding-top: 60.2px;
+    @media screen and (max-width: 330px) {
+      padding-top: 56.2px;
+    }
+  }
+  &.fixed-height {
+    max-height: calc(100vh - 60.2px);
+    @media screen and (max-width: 330px) {
+      max-height: calc(100vh - 56.2px);
+    }
+  }
+}
+
+#content,
+#appendix {
+  &.borderless {
+    background-color: var(--sn-stylekit-background-color);
+  }
+  &.borderless,
+  &.full-width {
+    .sk-panel.main {
+      border: 1px var(--sn-stylekit-background-color);
+      box-shadow: none;
+      &.edit,
+      &.view {
+        margin: 0px;
+      }
+    }
+  }
+  &.full-width {
+    // Also includes appendix
+    .sk-panel.main {
+      margin: 0px;
+      &.edit,
+      &.view {
+        max-width: unset;
+      }
+      // The 2em accounts for the 1em padding of
+      // .sk-panel.main defined above
+      @media screen and (min-width: 725px) {
+        &.appendix {
+          max-width: calc(100% - 2em);
+        }
+      }
+      @media screen and (max-width: 725px) {
+        &.appendix {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  &.overflow {
+    #renderedNote {
+      overflow-wrap: normal;
+      pre,
+      table {
+        overflow: visible;
+      }
+    }
+  }
+}
+
+#menu,
+#content,
+#appendix,
+.DynamicEditor {
+  font-size: var(--sn-stylekit-font-size-editor);
+  a {
+    color: var(--sn-stylekit-info-color); // #086dd6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  blockquote {
+    margin: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+  }
+
+  hr {
+    border: 0.5px solid var(--sn-stylekit-border-color);
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%; // 645.500px;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 16px;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    tr {
+      background-color: transparent; // #fff;
+      border-top: 1px solid var(--sn-stylekit-contrast-border-color); // #c6cbd1;
+    }
+
+    td,
+    th {
+      padding: 6px 13px;
+      border: 1px solid var(--sn-stylekit-contrast-border-color); // #dfe2e5;
+    }
+
+    tr:nth-child(2n) {
+      background-color: var(
+        --sn-stylekit-contrast-background-color
+      ); // #f6f8fa;
+      code,
+      pre {
+        background-color: var(--sn-stylekit-background-color);
+      }
+    }
+  }
+  summary {
+    .link {
+      display: inline;
+      color: var(--sn-stylekit-info-color);
+    }
+    .link:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: normal;
+  }
+}
+
+// This makes the table of contents more compact
+#renderedNote {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &[id='toc' i],
+    &[id='table-of-content' i],
+    &[id='table-of-contents' i] {
+      + ul {
+        li > p {
+          margin-block-start: 0em;
+          margin-block-end: 0em;
+        }
+      }
+    }
+  }
+}
+
+// Exclude CodeMirror
+#appendDynamicEditor,
+#dynamicEditor,
+#errorBoundary,
+#help,
+#intro,
+#renderedNote,
+#settings,
+.DynamicEditor,
+.rendered-note-section {
+  code,
+  pre {
+    font-family: var(--sn-stylekit-monospace-font);
+  }
+  .hljs {
+    color: var(--sn-stylekit-contrast-foreground-color);
+  }
+  .hljs-tag {
+    color: var(--sn-stylekit-foreground-color);
+  }
+
+  code {
+    box-sizing: border-box;
+    word-wrap: break-word;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: var(
+      --sn-stylekit-contrast-background-color
+    ); // rgba(27,31,35,.05);
+    border-radius: 3px;
+  }
+
+  pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: var(
+      --sn-stylekit-contrast-background-color
+    ); // rgba(27,31,35,.05);// #f6f8fa; the latter doesn't work well on dark mode
+    color: var(--sn-stylekit-foreground-color);
+    border-radius: 3px;
+    word-wrap: normal;
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  pre > code {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    word-break: normal;
+    white-space: pre;
+    background: transparent;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code {
+    display: inline;
+    max-width: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: initial;
+    border: 0;
+  }
+}
+
+#errorBoundary,
+#help,
+#intro,
+.rendered-note-section {
+  border: 1px transparent;
+  border-style: solid;
+  padding: 0px 10px;
+}
+
+// Same selection plus #renderedNote
+#errorBoundary,
+#help,
+#intro,
+#renderedNote,
+.rendered-section {
+  /*align-items: center;
+  justify-content: space-between;
+  min-width: inherit;
+  width: 100%;*/
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  line-height: 1.7;
+}
+
+.inline-text-and-svg {
+  display: inline-flex;
+  padding-left: 0px;
+  padding-right: 0px;
+  svg {
+    opacity: 0.75;
+    margin-top: auto;
+  }
+}
+
+#errorBoundary > :nth-child(1),
+#help > :nth-child(1),
+#renderedNote > div > :nth-child(1) {
+  margin-top: 0px;
+}
+
+.note-overlay {
+  position: fixed !important;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.note-dialog {
+  max-width: 700px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+}
+
+#settings {
+  height: 100%;
+}
+
+.note-dialog,
+#settings {
+  .title-section {
+    padding-top: 0px;
+    h1,
+    h2 {
+      margin: 0.2em 0px;
+    }
+  }
+  #undoDialogButton {
+    display: inline-flex;
+    font-family: Arial, sans-serif;
+    padding: 4px 2px;
+  }
+  .text-and-undo-button {
+    display: flex;
+    p,
+    .undo-icon {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      display: inline;
+    }
+  }
+  button {
+    @media screen and (max-width: 650px) {
+      font-size: 17px;
+    }
+  }
+  input[type='checkbox' i]:hover {
+    cursor: pointer;
+  }
+
+  .sk-panel-row.settings {
+    padding-top: 0.2rem;
+    label,
+    input,
+    select {
+      cursor: pointer;
+    }
+    input,
+    select {
+      font-size: 16px;
+      padding: 0.5rem;
+      background-color: var(--sn-stylekit-contrast-background-color);
+      border-color: var(--sn-stylekit-border-color);
+      color: var(--sn-stylekit-foreground-color);
+    }
+    .input-and-undo-button {
+      display: flex;
+    }
+    /* On screens with screens less than 360px
+       The inputs and buttons have width 217px*/
+    select {
+      min-width: 217px;
+    }
+    input[type='text'] {
+      min-width: 200px;
+    }
+    // The checkbox is 19.8px wide.
+    // 98.6 + 98.6 + 18.8px is 217
+    // Use padding instead of width to center the checkbox
+    .checkbox-input-label {
+      padding-left: 98.6px;
+      padding-right: 98.6px;
+    }
+    @media screen and (min-width: 360px) {
+      /* On screens with screens greater than 360px
+       The inputs and buttons have width 267px*/
+      select {
+        min-width: 267px;
+      }
+      input[type='text'] {
+        min-width: 250px;
+      }
+      .checkbox-input-label {
+        padding-left: 123.6px;
+        padding-right: 123.6px;
+      }
+      .chevron-toggle-button {
+        min-width: 267px;
+      }
+    }
+    .radio {
+      margin-top: 3px;
+      margin-bottom: 3px;
+    }
+    // Collapse on mobile
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      input {
+        margin-top: 1rem;
+      }
+      &.custom-css {
+        flex-direction: row;
+        max-width: 299px;
+        .custom-css-undo-button {
+          margin-top: auto;
+          margin-bottom: auto;
+        }
+      }
+    }
+  }
+}
+
+#appendix {
+  background-color: var(--sn-stylekit-contrast-background-color);
+  display: block;
+
+  .sk-button-group {
+    width: 50%;
+  }
+  .sk-panel {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .checkBoxForm {
+    position: absolute;
+    font-size: 13px;
+
+    label {
+      cursor: pointer;
+    }
+    padding-left: 10px;
+    @media screen and (max-width: 600px) {
+      padding-left: 10px;
+    }
+    @media screen and (max-width: 500px) {
+      padding-left: 5px;
+    }
+    @media screen and (max-width: 455px) {
+      label {
+        font-size: 12px;
+      }
+    }
+    @media screen and (max-width: 426px) {
+      label {
+        font-size: 11px;
+      }
+    }
+    @media screen and (max-width: 410px) {
+      label {
+        font-size: 10px;
+      }
+    }
+    @media screen and (max-width: 388px) {
+      label {
+        font-size: 9px;
+      }
+    }
+  }
+
+  #appendTextButton,
+  #scrollToTopButton,
+  #scrollToBottomButton {
+    font-size: 14px;
+    @media screen and (max-width: 650px) {
+      font-size: 17px;
+    }
+  }
+
+  #scrollToTopButton {
+    position: fixed;
+    right: 25px;
+    bottom: 45px;
+    @media screen and (max-width: 725px) {
+      right: 15px;
+      bottom: 5.2px;
+    }
+  }
+  #scrollToBottomButton {
+    position: fixed;
+    right: 25px;
+    bottom: 10px;
+    @media screen and (max-width: 725px) {
+      right: 55px;
+      bottom: 5.2px;
+    }
+  }
+}
+
+.MonacoEditorContainer,
+.MonacoDiffEditorContainer {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 300px;
+  height: 100%;
+  width: 100%;
+}
+
+.edit .MonacoEditorContainer,
+.edit .MonacoDiffEditorContainer {
+  height: calc(100% - 1em);
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#appendix .MonacoEditorContainer {
+  height: 400px;
+}
+
+@import './codemirror.scss';
+@import './dynamicEditor.scss';
+@import './print.scss';
+@import './dark.scss';

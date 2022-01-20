@@ -1,0 +1,20 @@
+{
+    "identifier": "io.github.mjfakler.sn-macos-dark-theme",
+    "name": "macOS Dark Theme",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "1.0.3",
+    "description": "macOS Dark Mode theme for Standard Notes.",
+    "marketing_url": "https://github.com/mjfakler/sn-macos-dark-theme",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-macos-dark-theme/1.0.3/dist/dist.css",
+    "download_url": "https://github.com/mjfakler/sn-macos-dark-theme/archive/1.0.3.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-macos-dark-theme/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#3a3a3c",
+        "foreground_color": "#FAFBFF",
+        "border_color": "#2c2c2e"
+    },
+    "statusBar": "dark-content"
+}

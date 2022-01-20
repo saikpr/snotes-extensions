@@ -1,0 +1,20 @@
+  {
+    "identifier": "io.github.tonyping.dark-hybrid-theme-sn",
+    "name": "Dark Hybrid",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "description": "Dark Hybrid Theme Extension for Standard Notes",
+    "version": "v1.2",
+    "url": "https://raw.githubusercontent.com/tonyping/dark-hybrid-theme-sn/master/dist/dist.css",
+    "download_url": "https://github.com/tonyping/dark-hybrid-theme-sn/releases/download/v1.2_rc0/dark-hybrid-theme-sn_v1.2_rc0.zip",
+    "marketing_url": "https://github.com/tonyping/dark-hybrid-theme-sn",
+    "latest_url": "https://raw.githubusercontent.com/tonyping/dark-hybrid-theme-sn/master/dht-theme.json",
+    "thumbnail_url": "https://raw.githubusercontent.com/tonyping/dark-hybrid-theme-sn/master/preview.png",
+    "dock_icon": {
+      "type": "circle",
+      "background_color": "#000000",
+      "foreground_color": "#000000",
+      "border_color":     "#ffffff"
+    },
+    "statusBar": "dark-content"
+  }

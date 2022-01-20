@@ -1,0 +1,21 @@
+{
+    "identifier": "io.github.xthursdayx.less-distraction",
+    "name": "Less Distraction",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "1.2.4",
+    "description": "A theme for focusing on your writing.",
+    "marketing_url": "https://github.com/xthursdayx/sn-less-distraction",
+    "thumbnail_url": "https://raw.githubusercontent.com/xthursdayx/sn-less-distraction/master/screenshot.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-less-distraction/1.2.4/dist/dist.css",
+    "download_url": "https://github.com/xthursdayx/sn-less-distraction/archive/1.2.4.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-less-distraction/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#FFFFFF",
+        "foreground_color": "#FFFFFF",
+        "border_color": "#FFFFFF"
+    },
+    "statusBar": "dark-content"
+}

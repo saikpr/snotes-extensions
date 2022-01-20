@@ -1,0 +1,13 @@
+{
+    "identifier": "com.dylanonelson.sn-scratch-editor",
+    "name": "Scratch Editor",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "0.0.41",
+    "description": "An editor for writing things down.",
+    "marketing_url": "https://dylanonelson.github.io/sn-scratch-editor",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-scratch-editor/0.0.41/dist/index.html",
+    "download_url": "https://github.com/dylanonelson/sn-scratch-editor/archive/0.0.41.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-scratch-editor/index.json"
+}

@@ -1,0 +1,13 @@
+{
+    "identifier": "7c6b07a91a09.token-vault",
+    "name": "TokenVault",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "2.0.9",
+    "description": "Encrypt and protect your 2FA secrets for all your internet accounts. TokenVault handles your 2FA secrets so that you never lose them again, or have to start over when you get a new device.",
+    "thumbnail_url": "https://standard-notes.s3.amazonaws.com/screenshots/models/editors/token-vault.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//token-vault/2.0.9/dist/index.html",
+    "download_url": "https://github.com/standardnotes/token-vault/archive/2.0.9.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//token-vault/index.json"
+}

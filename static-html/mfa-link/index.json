@@ -1,0 +1,12 @@
+{
+    "identifier": "7c6b07a91a09.mfa-link",
+    "name": "2FA Manager",
+    "content_type": "SN|Component",
+    "area": "modal",
+    "version": "1.2.5",
+    "description": "Configure two-factor authentication to add an extra level of security to your account.",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//mfa-link/1.2.5/dist/index.html",
+    "download_url": "https://github.com/standardnotes/mfa-link/archive/1.2.5.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//mfa-link/index.json"
+}

@@ -1,0 +1,13 @@
+{
+    "identifier": "7c6b07a91a09.bold-editor",
+    "name": "Bold Editor",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "1.3.2",
+    "description": "A simple and peaceful rich editor that helps you write and think clearly. Features FileSafe integration, so you can embed your encrypted images, videos, and audio recordings directly inline.",
+    "thumbnail_url": "https://s3.amazonaws.com/standard-notes/screenshots/models/editors/bold.jpg",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//bold-editor/1.3.2/dist/index.html",
+    "download_url": "https://github.com/standardnotes/bold-editor/archive/1.3.2.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//bold-editor/index.json"
+}

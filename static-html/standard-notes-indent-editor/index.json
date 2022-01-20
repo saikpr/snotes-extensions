@@ -1,0 +1,13 @@
+{
+    "identifier": "dev.maxlap.indent_editor",
+    "name": "Indent Editor",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "1.6.0",
+    "description": "A plain text editor with improved usability and readability.",
+    "marketing_url": "https://github.com/MaxLap/standard-notes-indent-editor",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//standard-notes-indent-editor/1.6.0/index.html",
+    "download_url": "https://github.com/MaxLap/standard-notes-indent-editor/archive/1.6.0.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//standard-notes-indent-editor/index.json"
+}

@@ -1,0 +1,14 @@
+{
+    "identifier": "io.xthursdayx.sn-ia-writer-quattro",
+    "name": "SN iA Writer Quattro",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "v1.0.5",
+    "description": "Replace all monospace and sans-serif fonts with iA Writer Quattro.",
+    "marketing_url": "https://github.com/xthursdayx/sn-ia-writer-quattro",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-ia-writer-quattro/v1.0.5/dist/theme.css",
+    "download_url": "https://github.com/xthursdayx/sn-ia-writer-quattro/archive/v1.0.5.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-ia-writer-quattro/index.json",
+    "layerable": true
+}

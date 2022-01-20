@@ -1,0 +1,21 @@
+{
+    "identifier": "io.github.matthew-cox.mojave-dark-mode",
+    "name": "Mojave Dark Mode",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "v0.0.3",
+    "description": "Standard Notes theme which roughly matches Mojave Dark Mode..",
+    "marketing_url": "https://github.com/matthew-cox/sn-theme-mojave-dark-mode",
+    "thumbnail_url": "https://github.com/matthew-cox/sn-theme-mojave-dark-mode/raw/master/preview.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-theme-mojave-dark-mode/v0.0.3/dist/mojave-dark-mode.css",
+    "download_url": "https://github.com/matthew-cox/sn-theme-mojave-dark-mode/archive/v0.0.3.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-theme-mojave-dark-mode/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#585858",
+        "foreground_color": "#ffffff",
+        "border_color": "#585858"
+    },
+    "statusBar": "dark-content"
+}

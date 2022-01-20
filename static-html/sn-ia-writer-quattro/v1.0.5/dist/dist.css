@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "iA Writer Quattro S";
+    src: url("font/Webfonts/iAWriterQuattroS-Regular.woff2") format("woff2"),
+        url("font/Webfonts/iAWriterQuattroS-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iA Writer Quattro S";
+    src: url("font/Webfonts/iAWriterQuattroS-Italic.woff2") format("woff2"),
+        url("font/Webfonts/iAWriterQuattroS-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iA Writer Quattro S";
+    src: url("font/Webfonts/iAWriterQuattroS-Bold.woff2") format("woff2"),
+        url("font/Webfonts/iAWriterQuattroS-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iA Writer Quattro S";
+    src: url("font/Webfonts/iAWriterQuattroS-BoldItalic.woff2") format("woff2"),
+        url("font/Webfonts/iAWriterQuattroS-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    --sn-stylekit-monospace-font: 'iA Writer Quattro S', monospace;
+    --sn-stylekit-sans-serif-font: 'iA Writer Quattro S', sans-serif;
+}
+
+/* Plain Editor */
+#note-text-editor {
+    font-family: 'iA Writer Quattro S', monospace !important;
+}
+
+/* Bold Editor */
+#editor {
+    font-family: 'iA Writer Quattro S', monospace !important;
+}
+
+/* Markdown Minimalist, Markdown Pro (Edit) */
+.CodeMirror {
+    font-family: 'iA Writer Quattro S', monospace !important;
+}
+
+/* Markdown Pro (Preview) */
+.editor-preview-side {
+    font-family: 'iA Writer Quattro S', monospace !important;
+}
+
+/* Plus Editor */
+.note-editable {
+    font-family: 'iA Writer Quattro S', monospace !important;
+}
+
+/* Task Editor */
+div.task>textarea {
+    font-family: 'iA Writer Quattro S', monospace !important;
+}

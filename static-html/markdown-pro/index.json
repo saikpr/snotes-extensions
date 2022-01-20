@@ -1,0 +1,14 @@
+{
+    "identifier": "7c6b07a91a09.advanced-markdown-editor",
+    "name": "Markdown Pro",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "1.4.1",
+    "description": "A fully featured Markdown editor that supports live preview, a styling toolbar, and split pane support.",
+    "marketing_url": "https://standardnotes.com/features/markdown-pro",
+    "thumbnail_url": "https://s3.amazonaws.com/standard-notes/screenshots/models/editors/adv-markdown.jpg",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//markdown-pro/1.4.1/dist/index.html",
+    "download_url": "https://github.com/standardnotes/markdown-pro/archive/1.4.1.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//markdown-pro/index.json"
+}

@@ -1,0 +1,21 @@
+{
+    "identifier": "io.github.xthursdayx.sn-theme-evernote-dark",
+    "name": "Evernote-style Dark Theme",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "1.2.6",
+    "description": "Evernote inspired dark theme for Standard Notes.",
+    "marketing_url": "https://github.com/xthursdayx/sn-theme-evernote-dark",
+    "thumbnail_url": "https://raw.githubusercontent.com/xthursdayx/sn-theme-evernote-dark/master/preview.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-theme-evernote-dark/1.2.6/dist/dist.css",
+    "download_url": "https://github.com/xthursdayx/sn-theme-evernote-dark/archive/1.2.6.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-theme-evernote-dark/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#00a82e",
+        "foreground_color": "#0081c2",
+        "border_color": "#00a82e"
+    },
+    "statusBar": "dark-content"
+}

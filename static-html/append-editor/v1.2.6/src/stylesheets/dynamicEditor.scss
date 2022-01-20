@@ -1,0 +1,66 @@
+.DynamicEditor {
+  padding: 9px 30px 10px;
+  div[class^='sc'] {
+    background-color: var(--sn-stylekit-background-color);
+
+    // The Rich Markdown Editor sets margins to be 1em 0 0.5em
+    // This resets it to the default for each header
+    h1 {
+      margin: 0.67em 0px 0.67em;
+    }
+    h2 {
+      margin: 0.83em 0px 0.83em;
+    }
+    h3 {
+      margin: 1em 0px 1em;
+    }
+    h4 {
+      margin: 1.33em 0px 1.33em;
+    }
+    // The Rich Markdown Editor sets the font-weight for headers to be 500
+    // This is less than font weight for <strong> which is 600
+    // This reverts the font-weight back to 700
+    h1,
+    h2,
+    h3,
+    h4 {
+      .heading-content {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+button.block-menu-trigger {
+  display: none !important;
+}
+@media screen and (min-width: 725px) {
+  .DynamicEditor {
+    padding: 5px 20px 10px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .YouTube {
+    min-height: 315px;
+    min-width: 560px;
+    margin: 10px auto;
+    display: block;
+  }
+}
+
+.ProseMirror {
+  background-color: var(--sn-stylekit-background-color);
+  color: var(--sn-stylekit-foreground-color);
+}
+
+#content.overflow {
+  .ProseMirror {
+    overflow-wrap: normal !important;
+  }
+  .ProseMirror li p:first-child {
+    word-break: normal !important;
+  }
+  .DynamicEditor pre {
+    overflow: visible;
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "identifier": "7c6b07a91a09.theme-futura",
+    "name": "Futura",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "1.2.5",
+    "description": "Calm and relaxed. Take some time off.",
+    "marketing_url": "https://standardnotes.org/extensions/futura",
+    "thumbnail_url": "https://s3.amazonaws.com/standard-notes/screenshots/models/themes/futura-with-mobile.jpg",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//futura-theme/1.2.5/dist/dist.css",
+    "download_url": "https://github.com/standardnotes/futura-theme/archive/1.2.5.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//futura-theme/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#fca429",
+        "foreground_color": "#ffffff",
+        "border_color": "#fca429"
+    },
+    "statusBar": "dark-content"
+}

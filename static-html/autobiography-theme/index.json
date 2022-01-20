@@ -1,0 +1,20 @@
+{
+    "identifier": "7c6b07a91a09.theme-autobiography",
+    "name": "Autobiography",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "1.0.2",
+    "description": "A theme for writers and readers.",
+    "thumbnail_url": "https://s3.amazonaws.com/standard-notes/screenshots/models/themes/autobiography.jpg",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//autobiography-theme/1.0.2/dist/dist.css",
+    "download_url": "https://github.com/standardnotes/autobiography-theme/archive/1.0.2.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//autobiography-theme/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#9D7441",
+        "foreground_color": "#ECE4DB",
+        "border_color": "#9D7441"
+    },
+    "statusBar": "dark-content"
+}

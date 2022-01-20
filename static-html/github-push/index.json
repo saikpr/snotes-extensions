@@ -1,0 +1,14 @@
+{
+    "identifier": "7c6b07a91a09.github-push",
+    "name": "GitHub Push",
+    "content_type": "SN|Component",
+    "area": "editor-stack",
+    "version": "1.2.4",
+    "description": "Push note changes to a public or private GitHub repository, with options for file extension and commit message.",
+    "marketing_url": "https://standardnotes.org/extensions/github-push",
+    "thumbnail_url": "https://s3.amazonaws.com/standard-notes/screenshots/models/components/github-push.jpg",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//github-push/1.2.4/index.html",
+    "download_url": "https://github.com/standardnotes/github-push/archive/1.2.4.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//github-push/index.json"
+}

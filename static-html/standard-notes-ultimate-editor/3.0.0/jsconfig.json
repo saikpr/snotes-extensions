@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "strictNullChecks": false
+  },
+  "include": ["src/**/*.js"],
+  "exclude": ["node_modules/", "tmp/", "build/", "jsconfig.json"],
+  "typeAcquisition": {
+    "exclude": [
+      "agent-base",
+      "dotenv",
+      "https-proxy-agent",
+      "source-map",
+      "source-map-js"
+    ]
+  }
+}

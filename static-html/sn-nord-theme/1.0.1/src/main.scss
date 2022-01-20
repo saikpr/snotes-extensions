@@ -1,0 +1,348 @@
+:root {
+  --primary-light: #4c566a;
+  --primary: #434c5e;
+  --primary-dark: #3b4252;
+
+  --secondary-light: #88c0d0;
+  --secondary: #81a1c1;
+  --secondary-dark: #5e81ac;
+    
+  --neutral: #d8dee9;
+  --success: #8fbcbb;
+  --warning: #ebcb8b;
+  --danger: #bf616a;
+
+  --ui-text-color: #eceff4;
+  --ui-border-color: #2e3440;
+
+  // Footer
+  --footer-bar-border-top-color: 0;
+
+  // Column Menus
+  --menu-item-sep-color: rgba(0, 0, 0, 0.1);
+
+  // StyleKit Vars
+  --sn-stylekit-info-color: var(--secondary-light);
+  --sn-stylekit-info-contrast-color: var(--primary-dark);
+  --sn-stylekit-info-color-darkened:  var(--secondary-dark);
+
+  --sn-stylekit-neutral-color: var(--neutral);
+  --sn-stylekit-neutral-contrast-color: var(--ui-text-color);
+
+  --sn-stylekit-success-color: var(--success);
+  --sn-stylekit-success-contrast-color: var(--ui-text-color);
+
+  --sn-stylekit-warning-color: var(--warning);
+  --sn-stylekit-warning-contrast-color: var(--ui-text-color);
+
+  --sn-stylekit-danger-color: var(--danger);
+  --sn-stylekit-danger-contrast-color: var(--ui-text-color);
+
+  --sn-stylekit-shadow-color: var(--primary-light);
+  --sn-stylekit-background-color: var(--primary-dark);
+  --sn-stylekit-border-color: var(--ui-border-color);
+  --sn-stylekit-foreground-color: var(--ui-text-color);
+
+  --sn-stylekit-contrast-background-color: var(--primary);
+  --sn-stylekit-contrast-foreground-color: var(--ui-text-color);
+  --sn-stylekit-contrast-border-color: var(--ui-border-color);
+
+  --sn-stylekit-secondary-background-color: var(--primary);
+  --sn-stylekit-secondary-foreground-color: var(--ui-text-color);
+  --sn-stylekit-secondary-border-color: var(--ui-border-color);
+
+  --sn-stylekit-secondary-contrast-background-color: var(--primary-light);
+  --sn-stylekit-secondary-contrast-foreground-color: var(--ui-text-color);
+  --sn-stylekit-secondary-contrast-border-color: var(--ui-border-color);
+
+  --sn-stylekit-editor-background-color: var(--primary-dark);
+  --sn-stylekit-editor-foreground-color: var(--ui-text-color);
+
+  --sn-stylekit-paragraph-text-color: var(--ui-text-color);
+
+  --sn-stylekit-input-placeholder-color: var(--primary-light);
+  --sn-stylekit-input-border-color: var(--ui-border-color);
+
+  --sn-desktop-titlebar-bg-color: var(--primary-dark);
+  --sn-desktop-titlebar-border-color: var(--ui-border-color);
+  --sn-desktop-titlebar-ui-color: var(--ui-text-color);
+  --sn-desktop-titlebar-ui-hover-color: var(--secondary-light);
+
+  --sn-stylekit-scrollbar-track-border-color: var(--ui-border-color);
+  --sn-stylekit-scrollbar-thumb-color: var(--secondary-light);
+  
+  --sn-stylekit-grey-1: var(--primary-light);
+  --sn-stylekit-grey-4-opacity-variant: var(--primary);
+  --sn-stylekit-grey-5: var(--primary-dark);
+
+  --sn-stylekit-menu-border: 1px solid var(--ui-border-color);
+
+  --sn-stylekit-general-border-radius: 4px;
+}
+
+/****************************************************************
+ *  General Styles
+****************************************************************/
+
+:root #select {
+  margin: 5px;
+  color: var(--sn-stylekit-foreground-color);
+  background-color: var(--sn-stylekit-secondary-background-color);
+  line-height: 1.3;
+  border: 1px solid var(--sn-stylekit-border-color);
+  border-radius: 4px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+:root pre {
+  overflow: auto;
+}
+
+:root ::placeholder { 
+  color: var(--secondary);
+}
+
+:root .sn-button.neutral {
+  background-color: var(--sn-stylekit-danger-color);
+}
+
+:root .sk-app-bar {
+  color: var(--secondary) !important;
+}
+
+:root .sk-menu-panel {
+  color: var(--sn-stylekit-neutral-color) !important;
+}
+
+:root .title {
+  color: var(--sn-stylekit-foreground-color) !important;
+}
+
+/* Workaround for subitems in Markdown lists not colored using StyleKit */
+:root .cm-s-default .cm-variable-3,
+:root .cm-s-default .cm-type {
+  color: var(--sn-stylekit-success-color) !important;
+}
+
+/****************************************************************
+ *  Note editor styles
+****************************************************************/
+
+// Darker editor title bar
+:root #editor-title-bar {
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+  padding-top: 14px;
+  padding-bottom: 26px;
+}
+
+// Tailors menu item hovering to be consistent with note hovering
+:root .sn-component .sk-menu-panel .sk-menu-panel-row:not(.selected):hover {
+  background-color: var(--sn-stylekit-secondary-contrast-background-color) !important;
+}
+
+// Text selection color
+:root ::selection {  
+  background: var(--sn-stylekit-info-color) !important;
+  color: var(--sn-stylekit-foreground-color) !important;
+}
+
+/* Use lighter blue for Minimal Markdown Editor sublists and other CodeMirror elements */
+:root .cm-s-default .cm-variable-3 {
+  color: #7e9a8f !important;
+}
+
+:root #editor-menu-bar > div > div.sk-app-bar-item.selected > div.sk-menu-panel.dropdown-menu.ng-scope > div:nth-child(1) > menu-row:nth-child(7) > div > div > div > div > div {
+  color: var(--sn-stylekit-danger-color);
+}
+
+/****************************************************************
+ *  Tags column styles
+****************************************************************/
+
+// These two styles apply to the "+" button for tags. The "+" button for
+// notes blend into the background, so for consistency, the same should apply
+// to the tags "+" button.
+:root .sn-component .sk-button.sk-secondary-contrast::before {
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+}
+
+:root .sn-component .sk-button.sk-secondary-contrast::after {
+  color: var(--sn-stylekit-secondary-background-color) !important;
+}
+
+:root .tag-tree .self.selected:before {
+	background: none;
+	background-color: var(--sn-stylekit-secondary-contrast-background-color);
+	opacity: 1;
+}
+
+:root .tag-tree .self .tag-info .action-menu {
+	margin-left: auto;
+	margin-right: 0;
+}
+:root .tags .tag > .menu:hover {
+	opacity: 0.5;
+}
+
+:root .tags .tag > .tag-info > .tag-icon {
+	opacity: 0.4;
+}
+:root #tags-content > div.scrollable > div > div.tag.ng-scope.selected > div.tag-info > div.tag-icon {
+	opacity: 0.5;
+}
+:root div.tag-info.level-1 > div.sk-circle.small.info {
+	opacity: 0.6;
+}
+:root div.tag-info.level-1 > div.sk-circle.small.success {
+	opacity: 0.6;
+}
+:root div.tag-info.level-2 > div.sk-circle.small.success {
+	opacity: 0.6;
+}
+:root div.tag-info.level-3 > div.sk-circle.small.danger {
+	opacity: 0.6;
+}
+:root div.tag-info.level-4 > div.sk-circle.small.warning {
+	opacity: 0.6;
+}
+:root div.tag-info.level-5 > div.sk-circle.small.neutral {
+	opacity: 0.6;
+}
+
+/****************************************************************
+ *  #notes-column styles
+****************************************************************/
+
+// Darken the #notes-column header
+:root #notes-column #notes-title-bar,
+:root .notes #notes-title-bar {
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+}
+
+// Search bar shouldn't be the same color as its background, this is necessary after
+// darkening the #notes-column header
+:root #search-bar {
+  border: 1px solid var(--sn-stylekit-contrast-border-color);
+  background-color: var(--sn-stylekit-editor-background-color) !important;
+}
+
+// Hovering over notes in #notes-column results in a lighter background color for the hovered note
+:root #notes-column .note:not(.selected):hover,
+:root .notes .note:not(.selected):hover {
+  background-color: var(--sn-stylekit-secondary-contrast-background-color) !important;
+}
+
+// Other notes styles
+:root #notes-scrollable {
+  background-color: var( --sn-stylekit-contrast-background-color) !important;
+}
+
+:root #notes-column .note,
+:root #notes-column .tag {
+  opacity: 1 !important;
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+  color: var(--sn-stylekit-foreground-color) !important;
+}
+
+:root #notes-column .note .name {
+  color: var(--sn-stylekit-foreground-color) !important;
+}
+
+:root #notes-column .note .plain-preview {
+  color: var(--sn-stylekit-foreground-color) !important;
+}
+
+// Sidebar note properties: Dates, tags, etc.
+:root #notes-column .note .date.faded,
+:root #notes-column .note .tags-string > .faded,
+:root #notes-column .note .note-flag,
+:root .editor-tags input {
+  opacity: 1 !important;
+  color: var(--sn-stylekit-neutral-color) !important;
+}
+
+// Note selected 
+:root #notes-column .note.selected,
+:root .notes .note.selected,
+:root #tags-column .tag.selected {
+  background: none !important;
+  background-color: var(--sn-stylekit-background-color) !important;
+  color: var(--sn-stylekit-foreground-color) !important;;
+}
+
+// Note flags
+:root #notes-column .note .note-flags .flag.info,
+:root .notes .note .note-flags .flag.info {
+  background-color: var(-sn-stylekit-background-color) !important;
+  color: var(--sn-stylekit-info-color) !important;
+}
+:root #notes-column .note .note-flags .flag.success,
+:root .notes .note .note-flags .flag.success {
+  background-color: var(-sn-stylekit-background-color) !important;
+  color: var(--sn-stylekit-success-color);
+}
+:root #notes-column .note .note-flags .flag.warning,
+:root .notes .note .note-flags .flag.warning {
+  background-color: var(-sn-stylekit-background-color) !important;
+  color: var(--sn-stylekit-warning-color);
+}
+:root #notes-column .note .note-flags .flag.neutral,
+:root .notes .note .note-flags .flag.neutral {
+  background-color: var(-sn-stylekit-background-color) !important;
+  color: var(--sn-stylekit-neutral-color);
+}
+:root #notes-column .note .note-flags .flag.danger,
+:root .notes .note .note-flags .flag.danger {
+  background-color: var(-sn-stylekit-background-color) !important;
+  color: var(--sn-stylekit-danger-color);
+}
+:root #notes-column .note.selected .note-flags .flag.info,
+:root .notes .note.selected .note-flags .flag.info {
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+}
+:root #notes-column .note.selected .note-flags .flag.success,
+:root .notes .note.selected .note-flags .flag.success {
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+}
+:root #notes-column .note.selected .note-flags .flag.warning,
+:root .notes .note.selected .note-flags .flag.warning {
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+}
+:root #notes-column .note.selected .note-flags .flag.neutral,
+:root .notes .note.selected .note-flags .flag.neutral {
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+}
+:root #notes-column .note.selected .note-flags .flag.danger,
+:root .notes .note.selected .note-flags .flag.danger {
+  background-color: var(--sn-stylekit-secondary-background-color) !important;
+}
+
+// Progress bars
+:root #notes-column .note progress, .notes .note progress {
+  border: 1px solid var(--sn-stylekit-border-color) !important;
+  background-color: var(-sn-stylekit-background-color) !important;
+  color: var(--sn-stylekit-foreground-color) !important;
+}
+
+:root #notes-column .note progress::-webkit-progress-bar, .notes .note progress::-webkit-progress-bar {
+  background-color: var(-sn-stylekit-background-color) !important;
+}
+
+:root #notes-column .note progress::-webkit-progress-value, .notes .note progress::-webkit-progress-value {
+  background-color: var(--sn-stylekit-foreground-color) !important;
+}
+
+:root #notes-column .note.selected progress, .notes .note.selected progress {
+  background-color: var(-sn-stylekit-background-color) !important;
+  color: var(--sn-stylekit-foreground-color) !important;
+}
+
+:root #notes-column .note.selected progress::-webkit-progress-bar, .notes .note.selected progress::-webkit-progress-bar {
+  background-color: var(-sn-stylekit-background-color) !important;
+}
+
+:root #notes-column .note.selected progress::-webkit-progress-value, .notes .note.selected progress::-webkit-progress-value {
+  background-color: var(--sn-stylekit-foreground-color) !important;
+}

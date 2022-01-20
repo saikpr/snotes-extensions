@@ -1,0 +1,21 @@
+{
+    "identifier": "space.yuggoth.sn-slate-theme",
+    "name": "Slate",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "v0.0.4",
+    "description": "A theme with shady grey and mossy green highlights.",
+    "marketing_url": "https://github.com/yithian/slate-theme",
+    "thumbnail_url": "https://raw.githubusercontent.com/yithian/slate-theme/main/images/sn-screenshot.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//slate-theme/v0.0.4/dist/dist.css",
+    "download_url": "https://github.com/yithian/slate-theme/archive/v0.0.4.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//slate-theme/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#252A2F",
+        "foreground_color": "#252A2F",
+        "border_color": "#8A9A5B"
+    },
+    "statusBar": "dark-content"
+}

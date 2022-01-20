@@ -1,0 +1,21 @@
+{
+    "identifier": "io.github.xthursdayx.sn-gruvbox-muted-theme-blue",
+    "name": "Gruvbox Muted Theme Blue",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "0.0.1",
+    "description": "Gruvbox Blue Muted Theme for Standard Notes.",
+    "marketing_url": "https://github.com/xthursdayx/sn-gruvbox-muted-theme/",
+    "thumbnail_url": "https://raw.githubusercontent.com/xthursdayx/sn-gruvbox-muted-theme/main/blue/blue-screenshot.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-gruvbox-muted-theme/0.0.1/blue/dist/dist.css",
+    "download_url": "https://github.com/xthursdayx/sn-gruvbox-muted-theme/archive/0.0.1.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-gruvbox-muted-theme/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#458588",
+        "foreground_color": "#3c3836",
+        "border_color": "#458588"
+    },
+    "statusBar": "dark-content"
+}

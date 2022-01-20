@@ -1,0 +1,13 @@
+{
+    "identifier": "com.append-editor.beta",
+    "name": "Append Editor - Beta",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "v1.2.6",
+    "description": "Append to your notes.",
+    "marketing_url": "https://appendeditor.com",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//append-editor/v1.2.6/public/index.html",
+    "download_url": "https://github.com/TheodoreChu/append-editor/archive/v1.2.6.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//append-editor/index.json"
+}

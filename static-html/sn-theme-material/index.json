@@ -1,0 +1,21 @@
+{
+    "identifier": "io.github.xthursdayx.sn-material-theme",
+    "name": "Material Theme",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "1.0.6",
+    "description": "Material Theme for Standard Notes.",
+    "marketing_url": "https://github.com/xthursdayx/sn-theme-material",
+    "thumbnail_url": "https://raw.githubusercontent.com/xthursdayx/sn-theme-material/master/screenshot.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-theme-material/1.0.6/dist/dist.css",
+    "download_url": "https://github.com/xthursdayx/sn-theme-material/archive/1.0.6.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-theme-material/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#263238",
+        "foreground_color": "#FFFFFF",
+        "border_color": "#009688"
+    },
+    "statusBar": "dark-content"
+}

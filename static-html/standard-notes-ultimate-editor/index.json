@@ -1,0 +1,13 @@
+{
+    "identifier": "dev.dec0dOS.ultimate_editor",
+    "name": "Ultimate Editor",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "3.0.0",
+    "description": "Markdown editor with improved mobile support and performance.",
+    "marketing_url": "https://github.com/dec0dOS/standard-notes-ultimate-editor",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//standard-notes-ultimate-editor/3.0.0/public/index.html",
+    "download_url": "https://github.com/dec0dOS/standard-notes-ultimate-editor/archive/3.0.0.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//standard-notes-ultimate-editor/index.json"
+}

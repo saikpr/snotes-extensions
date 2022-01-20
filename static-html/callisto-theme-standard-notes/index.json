@@ -1,0 +1,21 @@
+{
+    "identifier": "io.github.Lissy93.sn-callisto-theme",
+    "name": "Callisto",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "1.0.3",
+    "description": "Dusty background with teal accents.",
+    "marketing_url": "https://github.com/Lissy93/callisto-theme-standard-notes",
+    "thumbnail_url": "https://raw.githubusercontent.com/Lissy93/callisto-theme-standard-notes/master/screenshot1.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//callisto-theme-standard-notes/1.0.3/dist/dist.css",
+    "download_url": "https://github.com/Lissy93/callisto-theme-standard-notes/archive/1.0.3.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//callisto-theme-standard-notes/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#0b1021",
+        "foreground_color": "#d6085a",
+        "border_color": "#1EE3B5"
+    },
+    "statusBar": "dark-content"
+}

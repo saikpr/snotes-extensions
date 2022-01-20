@@ -1,0 +1,21 @@
+{
+    "identifier": "io.shompoe.sn-tangerine-theme",
+    "name": "Tangerine Theme",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "2.1.0",
+    "description": "Theme based on the Gruvbox Dark Theme with more orange highlights.",
+    "marketing_url": "https://github.com/shompoe/sn-tangerine-theme",
+    "thumbnail_url": "https://raw.githubusercontent.com/shompoe/sn-tangerine-theme/master/preview.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//sn-tangerine-theme/2.1.0/dist/dist.css",
+    "download_url": "https://github.com/shompoe/sn-tangerine-theme/archive/2.1.0.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//sn-tangerine-theme/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#D79921",
+        "foreground_color": "#076678",
+        "border_color": "#D79921"
+    },
+    "statusBar": "dark-content"
+}

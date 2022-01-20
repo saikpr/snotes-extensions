@@ -1,0 +1,38 @@
+:root {
+    --sn-stylekit-font-size-editor: 1.5rem;
+}
+
+.mac-desktop #editor-column {
+  padding-top: 35px;
+}
+
+.mac-desktop #editor-column:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 38px;
+  -webkit-app-region: drag;
+}
+
+#editor-title-bar {
+  display: none;
+}
+
+#editor-menu-bar {
+  display: none;
+}
+
+#editor-pane-component-stack {
+  display: none;
+}
+
+#footer-bar {
+  opacity: 0.08;
+  transition: opacity 0.25s;
+}
+
+#footer-bar:hover {
+  opacity: 1.0;
+}

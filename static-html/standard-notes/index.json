@@ -1,0 +1,21 @@
+{
+    "identifier": "ml.xnor.sn-theme-dracula",
+    "name": "Dracula",
+    "content_type": "SN|Theme",
+    "area": "themes",
+    "version": "0.0.17",
+    "description": "A Dracula inspired theme for Standard Notes.",
+    "marketing_url": "https://github.com/dracula/standard-notes",
+    "thumbnail_url": "https://raw.githubusercontent.com/dracula/standard-notes/master/screenshot.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//standard-notes/0.0.17/dist/dist.css",
+    "download_url": "https://github.com/dracula/standard-notes/archive/0.0.17.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//standard-notes/index.json",
+    "dock_icon": {
+        "type": "circle",
+        "background_color": "#bd93f9",
+        "foreground_color": "#bd93f9",
+        "border_color": "#bd93f9"
+    },
+    "statusBar": "dark-content"
+}

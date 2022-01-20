@@ -1,0 +1,13 @@
+{
+    "identifier": "dev.dec0dOS.fast_editor",
+    "name": "Fast Editor",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "4.0.2",
+    "description": "A mobile-friendly and high-performance editor that makes it easy to write and read nested notes.",
+    "marketing_url": "https://github.com/dec0dOS/standard-notes-fast-editor",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//standard-notes-fast-editor/4.0.2/index.html",
+    "download_url": "https://github.com/dec0dOS/standard-notes-fast-editor/archive/4.0.2.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//standard-notes-fast-editor/index.json"
+}

@@ -1,0 +1,14 @@
+{
+    "identifier": "org.matt-anderson.code-editor-fold",
+    "name": "Code Editor Fold",
+    "content_type": "SN|Component",
+    "area": "editor-editor",
+    "version": "1.0.0",
+    "description": "A fork of the official code editor which includes header and code folding.",
+    "marketing_url": "https://github.com/matta9001/code-editor-fold",
+    "thumbnail_url": "https://raw.githubusercontent.com/matta9001/code-editor-fold/main/code_editor_preview.png",
+    "valid_until": "2030-05-16T18:35:33.000Z",
+    "url": "https://snotes-extensions.netlify.app//code-editor-fold/1.0.0/index.html",
+    "download_url": "https://github.com/matta9001/code-editor-fold/archive/1.0.0.zip",
+    "latest_url": "https://snotes-extensions.netlify.app//code-editor-fold/index.json"
+}
