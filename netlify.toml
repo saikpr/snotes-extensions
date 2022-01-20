@@ -2,3 +2,4 @@
    for = "/*"
    [headers.values]
       Access-Control-Allow-Origin = "*"
+      Access-Control-Allow-Headers = "X-Requested-With, x-application-version, Content-Type, Origin, Authorization, Accept, Client-Security-Token, Accept-Encoding"
